@@ -14,49 +14,49 @@
 //
 //
 
-// let menu = [
-//   { producto: "chocolatina", precio: 3000 },
-//   { producto: "bomombum", precio: 1000 },
-//   { producto: "masmelos", precio: 2000 },
-//   { producto: "cables", precio: 500 },
-// ];
-// let total = 0;
-// let problema4y = document.querySelector("#problema4");
-// problema4y.addEventListener("submit", function (evento) {
-//   evento.preventDefault();
-//   let pedidoUsuario = evento.target.pedido_usuario.value;
-//   if (pedidoUsuario != "pagar") {
-//     let dulces = menu.find((dallana) => dallana.producto === pedidoUsuario);
-//     total = total + dulces.precio;
-//     evento.target.reset();
-//   } else {
-//     alert(total);
-//   }
-// });
-
-// 
-
 let menu = [
-  {producto: "chocolatina", precio: 3000},
-  {producto: "bombombum", precio: 1000},
-  {producto: "masmelos", precio:2000},
-  {producto: "cables", precio:500},
+  { producto: "chocolatina", precio: 3000 },
+  { producto: "bomombum", precio: 1000 },
+  { producto: "masmelos", precio: 2000 },
+  { producto: "cables", precio: 500 },
 ];
-let total= 0;
+let total = 0;
 let problema4y = document.querySelector("#problema4");
-problema4y.addEventListener ("submit",function (evento){
+problema4y.addEventListener("submit", function (evento) {
   evento.preventDefault();
   let pedidoUsuario = evento.target.pedido_usuario.value;
   if (pedidoUsuario != "pagar") {
-    let dulces = menu.findIndex()
-    
+    let dulces = menu.find((dallana) => dallana.producto === pedidoUsuario);
+    total = total + dulces.precio;
+    evento.target.reset();
+  } else {
+    alert(total);
   }
+});
 
-}
+// 
+
+// let menu = [
+//   {producto: "chocolatina", precio: 3000},
+//   {producto: "bombombum", precio: 1000},
+//   {producto: "masmelos", precio:2000},
+//   {producto: "cables", precio:500},
+// ];
+// let total= 0;
+// let problema4y = document.querySelector("#problema4");
+// problema4y.addEventListener ("submit",function (evento){
+//   evento.preventDefault();
+//   let pedidoUsuario = evento.target.pedido_usuario.value;
+//   if (pedidoUsuario != "pagar") {
+//     let dulces = menu.findIndex()
+    
+//   }
+
+// }
 
 
 
 
-)
+
 
 

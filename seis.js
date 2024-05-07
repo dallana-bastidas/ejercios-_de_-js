@@ -17,24 +17,18 @@
 
 let problema6y = document.querySelector("#problema6");
 problema6y.addEventListener("submit", function (evento) {
-  evento.preventDefault();
-  let promedio_estudiante = evento.target.promedio.value;
-  let precio = 1000000;
-  let promedio_medio = precio * 0.95;
-  let promedio_alto = precio * 0.5;
+    evento.preventDefault();
+    let promedio_estudiante = parseFloat(evento.target.promedio.value);
+    console.log("🚀 ~ promedio_estudiante:", promedio_estudiante);
+    let precio = 1000000;
+    let promedio_medio = precio * 0.95;
+    let promedio_alto = precio * 0.5;
 
-  if (promedio_estudiante < 3) {
-    document.querySelector("#resultadoPunto6").innerHTML =
-      "Su matricula tiene el valor de: 1.000.000 ";
-  } else if (promedio_estudiante >= 3.1 && promedio_estudiante <= 4) {
-    promedio_medio = precio * 0.95;
-    document.querySelector(
-      "#resultadoPunto6"
-    ).innerHTML = `Su matricula tiene el valor de: ${promedio_medio}`;
-  } else if (promedio_estudiante > 4.1) {
-    promedio_alto = precio * 0.5;
-    document.querySelector(
-      "#resultadoPunto6"
-    ).innerHTML = `Su matricula tiene el valor de: ${promedio_alto}`;
-  }
+    if (promedio_estudiante < 3) {
+        document.querySelector("#resultadoPunto6").innerHTML = "Su matricula tiene el valor de: 1.000.000 ";
+    } else if (promedio_estudiante >= 3.1 && promedio_estudiante <= 4) {
+        document.querySelector("#resultadoPunto6").innerHTML = `2 Su matricula tiene el valor de: ${promedio_medio}`;
+    } else {
+        document.querySelector("#resultadoPunto6").innerHTML = `3 Su matricula tiene el valor de: ${promedio_alto}`;
+    }
 });
